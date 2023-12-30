@@ -1,0 +1,53 @@
+// Scss Document
+
+$font: Arial;
+$primary:#6170E0; //blue
+$secondary: #E99F16; //orange
+$neutral: #666;
+
+body {
+	color: $neutral;
+	font-family: $font;
+	line-height: 1.5em;
+}
+
+h1 {
+	color: $primary;
+}
+
+h2 {
+	color: $secondary;
+}
+
+@import "navigation";
+
+@mixin push--auto {
+	margin: {
+		left:auto;
+		right: auto;
+	}
+}
+
+.centered {
+	display: block;
+	margin-bottom: 20px;
+	@include push--auto;
+}
+
+@mixin border--radius--size($size) {
+	-moz-border-radius: $size;
+	-webkit-border-radius: $size;
+	-ms-border-radius: $size;
+	border-radius: $size;
+}
+
+section {
+	padding: 20px;
+	margin-bottom: 20px;
+	border: 3px solid $primary;
+	@include border--radius--size(20px);
+	
+}
+
+ 
+ 
